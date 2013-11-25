@@ -554,9 +554,8 @@ init_sys ()
   setlinebuf (stderr);
 # endif
 
-  fprintf (stderr, "IRCd initialized, launching into background.\n");
-  fprintf (stderr,
-           "========================================================\n");
+  fprintf (stderr, "IRCd initialized with PID %i, launching into background.\n",(int) getpid ());
+  fprintf (stderr, "========================================================\n");
 
 
 
@@ -569,7 +568,7 @@ init_sys ()
 
   if (bootopt & BOOT_TTY)
   {
-    engine_init ();
+    engine_init();
 
 #ifdef USE_ADNS
     /* start up adns! */
@@ -605,11 +604,13 @@ init_sys ()
       {
         write (fd, "Couldn't fork!\n", 15);     /* crude, but effective */
       }
+	  fprintf (stderr, "Didn't fork!\n");
       exit (0);
     }
     else if (pid > 0)
     {
-      exit (0);
+	  /* I may need to be added back :o -Thomas */
+      //exit (0);
     }
 # ifdef TIOCNOTTY
     if ((fd = open ("/dev/tty", O_RDWR)) >= 0)
@@ -767,8 +768,7 @@ check_client (aClient * client_p)
         break;
     if (!hp->h_addr_list[i])
     {
-      sendto_one (client_p,
-                  "NOTICE AUTH :*** Your forward and reverse DNS do not match, ignoring hostname.");
+      sendto_one (client_p,"NOTICE AUTH :*** Your forward and reverse DNS do not match, ignoring hostname.");
       hp = NULL;
     }
   }
@@ -867,7 +867,7 @@ check_server_init (aClient * client_p)
   if (!client_p->ip.S_ADDR)
   {
     /* something is wrong if we don't have a IP addr here! (as the server connected to us!) */
-    Debug ((DEBUG_DEBUG, "Hu? IP address of socket is empty!"));
+    Debug ((DEBUG_DEBUG, "Huh? IP address of socket is empty!"));
     return -1;
   }
   return check_server (client_p, c_conf, n_conf, 0);

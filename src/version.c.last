@@ -30,8 +30,8 @@
 #include "struct.h"
 #include "version.h"
 
-char *generation = "18";
-char *creation = "Tue Nov 26 2013 at 00:57:18 MSK";
+char *generation = "54";
+char *creation = "Tue Nov 26 2013 at 03:45:55 MSK";
 char version[128];
 char protoctl[512];
 

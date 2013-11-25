@@ -1198,7 +1198,7 @@ main (int argc, char *argv[])
       (void) syslog (LOG_CRIT, "Couldnt find any M:line\n");
 #endif
       ilog (LOGF_CRITICAL, "[ERROR] Could not find M:line in configuration");
-      exit (1);
+      //exit (1); /* Add me back! -Thomas */
     }
     else
     {
