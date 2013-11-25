@@ -1,5 +1,5 @@
 /*
- *  UltimateIRCd - an Internet Relay Chat daemon, doc/authors/Authors
+ *  SurrealIRCD - The Surreal Internet Relay Chat daemon, doc/authors/Authors
  *
  *  Copyright (C) 1990-2005 by the past and present ircd coders, and others.
  *  Refer to the documentation within docs/authors/ for full credits and copyrights.
@@ -19,9 +19,12 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
  *  USA
  *
- * $Id: Authors 921 2005-04-10 22:30:59Z shadowmaster $
  */
 
+ We have left the Authors information intact due to our fork from UltimateIRCD.
+ SurrealIRCD is currently maintained by Thomas Edwards but I/We seriously give
+ credit to the creators of UltimateIRCD and are sad to see a Project die.
+ 
  /*
   * This file attempts to remember and give credits to all who have helped in
   * the development of UltimateIRCd over the years.

@@ -1,0 +1,4 @@
+If you are using a Services Package that at one point did support UltimateIRCD but has removed
+support due to the UltimateIRCD Project dying off. You can find the appropriate files in this
+directory. Just move the .c file for the correct Services Package to the protocl/protocol directory
+for your services package and name it surrealircd.c Do the same for the header files (*.h)
