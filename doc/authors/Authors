@@ -1,0 +1,133 @@
+/*
+ *  UltimateIRCd - an Internet Relay Chat daemon, doc/authors/Authors
+ *
+ *  Copyright (C) 1990-2005 by the past and present ircd coders, and others.
+ *  Refer to the documentation within docs/authors/ for full credits and copyrights.
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+ *  USA
+ *
+ * $Id: Authors 921 2005-04-10 22:30:59Z shadowmaster $
+ */
+
+ /*
+  * This file attempts to remember and give credits to all who have helped in
+  * the development of UltimateIRCd over the years.
+  * Names can only be added to this file, no name should ever be removed.
+  * This file must be included in all distribuitions of UltimateIRCd and derived works.
+  */
+
+IRC was conceived of and written by Jarkko Oikarinen <jto at tolsun dot oulu dot fi>.
+IRC was originally written in University of Oulu, Computing Center.
+See doc/authors/IRC-Authors for the original IRC credits.
+
+UltimateIRCd3.0.x is a derived work of the DALnet Bahamut IRCd which is derived from the
+Hybrid and DreamForge IRCd's.
+See docs/authors/Hybrid-team and docs/authors/Bahamut-team for full credits.
+
+UltimateIRCd is maintained by ShadowRealm Creations UltimateIRCd development team
+<Ultimate-Devel at Shadow-Realm dot org>
+
+Current developers on the UltimateIRCd team:
+	Justin Hammond		Fish				<Fish at Shadow-Realm dot org>
+ 	K. Hawkes			Miles			<k.hawkes at zombies dot force9 dot net>
+	Mathias Vörös		AgAiNaWaY		<Againaway at Shadow-Realm dot org>
+	Patrick Healy			Phealy			<Phealy at Shadow-Realm dot org>
+	Thomas Stensås		ShadowMaster	<ShadowMaster at Shadow-Realm dot org>
+	Thomas Wagenveld	Radiant			<Radiant at Shadow-Realm dot org>
+
+
+Developers and contributors who have directly worked with the UltimateIRCd project
+contributing their code, advice, skills and time to help out in the past or present:
+
+	Adam Rutter			Shmad			<shmad at neostats dot net>
+	Christian Gayer		cg				<cg at dexit dot de>
+	Daniel Moss			Acidic32			<Acidic32 at Shadow-Realm dot org>
+	David Ranger		Sabar
+	Frode Hus			Willow			<Willow at WhisperedDreams dot com>
+	John M. Hoyt			WarNPeace		<amicon at amicon dot net>
+	Patrick Healy			Phealy			<Phealy at Shadow-Realm dot org>
+	Ray Akey			HMetal			<rakey at Amiga dot com>
+	Vincent Palmer		shift				<shift at shiftnetwork dot co dot uk>
+						Belinda			<Belinda at Shadow-Realm dot org>
+						Dief				<Dief at Shadow-Realm dot org>
+						Dooley			<Dooley at Shadow-Realm dot org>
+						Will				<Will at Shadow-Realm dot org>
+
+In addition the following have contributed to IRCd development in one way or another in the past and present:
+
+	Daniel Engel 			dengel			<dane at zero dot org>
+	Roger Yerramsetti	RogerY 			<rogery at austnet dot org>
+	Joar Sivertsen		Sp^				<jsiv at start dot no>
+	Robert E. Plummer	Toymaster		<ToyMaster at UltimateIRC dot net>
+	Joe Lindstöm			Nak				<Nak at VillageIRC dot net>
+	Scott Hildenbrand	DarkWolf/Scott	<DarkWolf at VillageIRC dot net>
+	Michael Lawson		WeaZeL			<WeaZeL at VillageIRC dot net>
+	Rossi Marcello		vejeta			<vjt at users dot sourceforge dot net>
+	Pierre-Luc Brunet		Fuitad
+	Helen Rose
+	Darren Reed
+	Armin Gruner
+	Markku Savela
+	Philippe Levan
+	Carsten Munk
+	Chip Norkus
+	Joan Touzet
+	Lucas Madar
+	Chelsea Ashley Dyerman
+						Graham			<Graham at Demonkarma dot net>
+						n3rd
+						Crash
+						larelian{DeS}
+	Massachusetts Institute of Technology (M.I.T)
+	Rhe Regents of the University of California
+        Bahamut, Hybrid, StarChat, RageIRCd, EliteIRCd, UnrealIRCd and LiquidIRCd development teams.
+
+The following people and companies have aided the development in one way or another:
+
+	Joel Comm			Infomedia Inc.		<jcomm at worldvillage dot com>
+        Scott Hildenbrand	TheBitz Inc.			<DarkWolf at TheBitz dot com>
+
+The author would like to thank everyone at VillageIRC.net for your patience
+and support. This includes but is in no way limited to the following persons:
+
+        Marvie, Emerald, Serena, DKay, Nak, Zave, Kerrne, Snazzy, Rhapsody,
+        Allan, Auntie, Molly, Magic, Nuclear-X, ZJ, XT.
+
+Also thanks to:
+	Irchighway.net staff
+	NoverNet.com staff
+        uirc.net staff
+        Risanet.com staff
+        DemonKarma.net staff
+        Clan-Forsaken.com staff
+	irc-chat.net staff
+	All members of the Shadow-Realm.org community
+        Crash
+        Binary
+        Derelict
+        ToyMaster
+        CM
+        JyNx
+        Benjamin
+        Rascle
+        CJ
+        DodGeR
+        Pierre-Luc
+        StrikerST
+        n3rd
+	Hirop
+	Chrysalis
+	JH

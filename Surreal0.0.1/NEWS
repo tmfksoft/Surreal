@@ -1,0 +1,34 @@
+Symbols:
+(SM) - ShadowMaster (ShadowMaster at Shadow-Realm dot org)
+(AA) - Againaway (Againaway at Shadow-Realm dot org)
+(JH) - Fish (Fish at Shadow-Realm dot org)
+(BP) - Bahamut team Patches to bahamut
+(QN) - Quinn (Quinn at ShadowRealm Forums)
+(PH) - Phealy (Phealy at Shadow-Realm dot org)
+(RD) - Radiant (Radiant at Shadow-Realm dot org)
+
+3.0.2
+=== New Features ===
+ (SM) We now use ccdv (http://ccdv.sourceforge.net/) with some fixes from the NeoStats team to
+         clean up the compiler output some.
+         This was originally written by the NcFTP developers.
+
+=== Bugfixes ===
+ (SM) Fixed some compiler warnings.
+ (SM) Really fix compiler issues on some Solaris systems where poll was not used as the socketengine.
+ (SM) Made IRCDHELP more accurate for channelmode +N
+ (SM) Added autoconf detection of va_copy and __va_copy for better portability. (#0000052)
+ (SM) Small portability compile fix to allow mkpassword tool to be built in 32bit mode on x86_64 amongst others.
+ (SM) Various spelling errors. Thanx to erich @ SRC forums for pointing some of them out.
+ (SM) /OPERMOTD is now local only, and the silly error message has been fixed.
+ (SM) Apply Bahamut's final patch to resolve the busy loop with epoll. Originally found by myself and reported to
+         the Bahamut team along with a workaround.
+ (SM) Fixed a bug causing mIRC to set $network to conflicting content under certain network name settings (#0000058)
+ (SM) GCC 4.0.x warning fixes from Trystan @ SRC Forum
+ (SM) Update bundled zlib to 1.2.3.
+ (JH) Fix a bug in /stats w  which would cause it to send replies all over the place.
+ (SM) Fix OpenSSL detection during configure. (#0000061)
+ (SM) Fix an issue with ULined clients being unable to control channel mode +S (#0000063)
+ (SM) Fix bug in detection of CTCP ACTION in check_for_ctcp (#0000060)
+ (SM) Apply patch from Avenger to address bug #0000064.
+ (SM) Apply patch from Avenger fixing an issue with remote clients not being shown as being connected by SSL.

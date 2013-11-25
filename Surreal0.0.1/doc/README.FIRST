@@ -1,0 +1,52 @@
+UltimateIRCd 3.0 README.FIRST
+----------------------------------------------
+$Id: README.FIRST 879 2005-03-16 07:41:17Z shadowmaster $
+
+If you don't read this first, we won't help you.
+:-)
+
+See the INSTALL document for info on configuring and compiling
+UltimateIRCd 3.0
+
+See the FAQ for frequently asked questions. If you do NOT read the FAQ
+and come ask for support on something answered by the FAQ, chances are
+you quite rudly will be told to read the FAQ. The FAQ is there to prevent
+having to repeatedly and pointlessly answer Frequently Asked Questions.
+Hence its name.
+
+DEBUGGING MODE: if you run ircd with src/ircd -s , it will send
+errors that are normally syslogged to stderr.  This is very useful
+if you don't have syslogging set up and ircd won't run.
+
+IMPORTANT. If upgrading from 2.8.x or previous you will need to
+recreate your networks settings file and ircd.ini file.
+
+ZLines NO LONGER EXSIST. A Kline set on K:ip:reason:* now serves the same
+function as an szline.
+SZLines are also no longer supported, but akills serve the same function when set
+on *@ip
+
+The format of P lines have changed and O line flags have been altered.
+
+U and H lines have been altered. 
+**** YOU MUST CHANGE YOUR U AND H LINES ****
+
+U:Server Name:*:*::
+H:servers which are permitted entry::hub server::
+
+See example.conf or ircd.conf.dist for examples or more info.
+
+TRANSLATION: You *MUST* fix your conf before upgrading from older versions.
+
+The network settings files will change between releases during the alpha versions.
+Be sure to keep an eye on conf/networks/ChangeLog and adjust your network settings file
+accordingly.
+
+To obtain support for UltimateIRCd please go to http://www.shadow-realm.org/forum/
+
+WARNING: UltimateIRCd is NOT compactible with other IRCd's. This includes UltimateIRCd 2.8.x or older.
+Do not try, it WILL NOT WORK. You have been warned.
+
+SERVICES: UltimateIRCd 3.0.0 will work with any services which supports the Bahamut 1.4.8-1.4.28 protocol.
+It will also work with any services supporting the UltimateIRCd 3.0 protocol extentions.
+It will NOT work with services compiled with UltimateIRCd 2.x.x support.

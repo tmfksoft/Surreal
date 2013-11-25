@@ -1,0 +1,1274 @@
+# Microsoft Developer Studio Generated Dependency File, included by UltimateIRCd.mak
+
+..\src\blalloc.c : \
+	"..\include\blalloc.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\bsd.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\channel.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\class.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\clientlist.c : \
+	"..\include\blalloc.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\dbuf.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\dich_conf.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\drone.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\dynconf.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\fdlist.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\fds.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\hash.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\inet_addr.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\hash.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\inet_ntop.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\hash.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\inet_pton.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\hash.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\ircd.c : \
+	"..\include\blalloc.h"\
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dh.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"..\include\userban.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\ircsprintf.c : \
+	"..\include\config.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\setup_win32.h"\
+	"..\include\va_copy.h"\
+	
+
+..\src\list.c : \
+	"..\include\blalloc.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dh.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\m_nick.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\m_who.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\match.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\packet.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dh.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\parse.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\rc4.c : \
+	"..\include\dh.h"\
+	
+
+..\src\res.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\res_comp.c : \
+	"..\include\nameser.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\res_init.c : \
+	"..\include\config.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\nameser.h"\
+	"..\include\resolv.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\res_mkquery.c : \
+	"..\include\config.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\nameser.h"\
+	"..\include\resolv.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\res_win32.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\nameser.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\resolv.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_auth.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_bsd.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\nameser.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\resolv.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"..\include\userban.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_conf.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\userban.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_debug.c : \
+	"..\include\blalloc.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\userban.h"\
+	"..\include\whowas.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_err.c : \
+	"..\include\class.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_help.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_hidehost.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_misc.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_numeric.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_serv.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dh.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\nameser.h"\
+	"..\include\numeric.h"\
+	"..\include\resolv.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"..\include\userban.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_services.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_ultimate.c : \
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\s_user.c : \
+	"..\include\blalloc.h"\
+	"..\include\channel.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\msg.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\supported.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"..\include\userban.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\scache.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\send.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dh.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\va_copy.h"\
+	"..\include\zlink.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_devpoll.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_epoll.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_kqueue.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_poll.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_select.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\socketengine_winsock.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\fds.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\sock.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\ssl.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\support.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\throttle.c : \
+	"..\include\blalloc.h"\
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\res.h"\
+	"..\include\res_win32.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\throttle.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\userban.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\inet.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\userban.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\version.c : \
+	"..\include\class.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dynconf.h"\
+	"..\include\hash.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\whowas.c : \
+	"..\include\class.h"\
+	"..\include\common.h"\
+	"..\include\config.h"\
+	"..\include\dbuf.h"\
+	"..\include\defs.h"\
+	"..\include\dich_conf.h"\
+	"..\include\dynconf.h"\
+	"..\include\fdlist.h"\
+	"..\include\find.h"\
+	"..\include\h.h"\
+	"..\include\hash.h"\
+	"..\include\ircsprintf.h"\
+	"..\include\numeric.h"\
+	"..\include\send.h"\
+	"..\include\setup_win32.h"\
+	"..\include\struct.h"\
+	"..\include\sys.h"\
+	"..\include\whowas.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+..\src\zlink.c : \
+	"..\include\zlink.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	
+
+!IF  "$(CFG)" == "UltimateIRCd - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "UltimateIRCd - Win32 Debug"
+
+!ENDIF 
+
+..\zlib\adler32.c : \
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	
+
+..\zlib\compress.c : \
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	
+
+..\zlib\crc32.c : \
+	"..\zlib\crc32.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\deflate.c : \
+	"..\zlib\deflate.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\gzio.c : \
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\infback.c : \
+	"..\zlib\inffast.h"\
+	"..\zlib\inffixed.h"\
+	"..\zlib\inflate.h"\
+	"..\zlib\inftrees.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\inffast.c : \
+	"..\zlib\inffast.h"\
+	"..\zlib\inflate.h"\
+	"..\zlib\inftrees.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\inflate.c : \
+	"..\zlib\inffast.h"\
+	"..\zlib\inffixed.h"\
+	"..\zlib\inflate.h"\
+	"..\zlib\inftrees.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\inftrees.c : \
+	"..\zlib\inftrees.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\trees.c : \
+	"..\zlib\deflate.h"\
+	"..\zlib\trees.h"\
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	
+
+..\zlib\uncompr.c : \
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	
+
+..\zlib\zutil.c : \
+	"..\zlib\zconf.h"\
+	"..\zlib\zlib.h"\
+	"..\zlib\zutil.h"\
+	

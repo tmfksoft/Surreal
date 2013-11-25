@@ -1,0 +1,4 @@
+# If you dont have anything else in your crontab
+# you can simply have crontab load this file using
+# crontab filename
+0,5,10,15,20,25,30,35,40,45,50,55 * * * *   /path/to/dir/bin/ircdchk >/dev/null 2>&1

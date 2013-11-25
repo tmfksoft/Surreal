@@ -1,0 +1,243 @@
+ver^2.1.6
+#
+# Template Network Configuration File
+# --------------------------------------------
+#  Added-at:     <day> <month> <year>
+#  Author:       <nick> (<real name>)
+#  E-Mail:       <email>
+#  ----------------------------------------------------------------------------------------------------------------
+# This is a template so you can create your own network configuration files
+# Just follow the instructions and it should work fine.
+#
+# Email your networks settings file and any updates to Ultimate-Devel@Shadow-Realm.org
+# for it to be included in future releases.
+#
+# IMPORTANT:
+# Do not comment out any settings or leave any settings empty, it can lead to crashes when the IRCd
+# tries to access the settings.
+#
+# 0 = No   1 = Yes unless stated otherwise for specific settings.
+#  ----------------------------------------------------------------------------------------------------------------
+#
+# $Id: template.network 739 2004-01-17 22:26:10Z shadowmaster $
+
+
+# This specify the short name of the IRC network.
+# Examples: DALnet, Undernet, VillageIRC, UltimateIRC, ShadowFire
+#
+Set ircnetwork .................: Some-IRCnet
+
+# This will be used to display your Networks Name upon connect etc.
+# Set this to: The yournetwork IRC Network
+#
+Set ircnetwork_name ............: The Some IRC Network
+
+# This is where your DNS pool is (like irc.dal.net)
+# This server is what will be displayed if a server is full.
+#
+Set defserv ....................: irc.SomeIRC.net
+
+# This is the Web Page of your Network.
+# Use the form http://www.irc.net/
+#
+Set website ....................: http://www.SomeIRC.net/
+
+# This is the Web Page containing the rules/policies of your Network.
+# Use the form http://www.irc.net/somepage.html
+#
+Set rules_page .................: http://www.SomeIRC.net/
+
+# This is the KLine/Akill address of your Network.
+#
+Set network_kline_address ......: KLine@Badly.Configured.Server.com
+
+# Set this to 0 if you do not wish your users to have hiddenhosts set
+# upon connecting.
+#
+Set mode_x .....................: 1
+
+# Set this to 1 if you do not wish users to be able to set +x if mode_x is set to 0,
+# or if you wish users to be unable to set -x if mode_x is set to 1.
+#
+Set mode_x_lock ................: 1
+
+# Set this to 1 if you wish rudimentary clone protection for your network.
+# Please note there is no excempts for clone protection at this time.
+# This feature is intended as a backup, and its recomended that you make use
+# of services bases session limiting.
+#
+Set clone_protection ...........: 0
+
+# This will determine the maximum number of allowed clones on the network.
+# This must be a value between 2 and 10.
+#
+Set clone_limit ................: 10
+
+# Set this to allow IRC Operators to clone as much as they want.
+# (Discouraged)
+#
+Set oper_clone_limit_bypass ....: 1
+
+# Do you want to hide U lined servers from /LIST's for non Opers?
+# Generally a good idea and required on many Networks.
+#
+Set hideulinedservs ............: 1
+
+# Set this if you want to have the servers on your network broadcast
+# global connect notices to usermode +F.
+# Please note that this feature will easilly waste bandwith on larger networks.
+#
+Set global_connects ............: 1
+
+# Set this if you want your operators to be automatically set +p if they have
+# the proper OLine flag.
+# (Discouraged)
+#
+Set oper_autoprotect ...........: 0
+
+# Currently not used, ignore
+#
+Set oper_mode_override .........: 3
+
+# Currently not used, ignore
+#
+Set oper_mode_override_notice ..: 0
+
+# Allows you to have users auto join channels when they connect to the network.
+# Channels MUST be listed separated by commas ',' and with no spaces.
+#
+# Ex: #ShadowRealm,#Citadel,#OffOurMeds
+#
+# Set to 0 to disable.
+#
+Set users_auto_join ............: 0
+
+# Allows you to have opers auto join channels when they /OPER.
+# Channels MUST be listed separated by commas ',' and with no spaces.
+#
+# Ex: #Help,#OperHelp,#Staff
+#
+# Set to 0 to disable.
+#
+Set opers_auto_join ............: 0
+
+# Should the NickServ/NS secure forwarding alias be availible?
+#
+Set enable_nickserv_alias ......: 1
+
+# Should the ChanServ/CS secure forwarding alias be availible?
+#
+Set enable_chanserv_alias ......: 1
+
+# Should the MemoServ/MS secure forwarding alias be availible?
+#
+Set enable_memoserv_alias ......: 1
+
+# Should the BotServ/BS secure forwarding alias be availible?
+#
+Set enable_botserv_alias .......: 1
+
+# Should the RootServ/RS secure forwarding alias be availible?
+#
+Set enable_rootserv_alias ......: 0
+
+# Should the OperServ/OS secure forwarding alias be availible?
+#
+Set enable_operserv_alias ......: 1
+
+# Should the StatServ/SS secure forwarding alias be availible?
+#
+Set enable_statserv_alias ......: 1
+
+# Should the HostServ/HS secure forwarding alias be availible?
+#
+Set enable_hostserv_alias ......: 0
+
+# This is the name of your Services Server
+#
+Set services_server ............: Services.net
+
+# This is the name of your Statistical Server
+#
+Set statserv_server ............: Statistics.net
+
+# This is the name of your HostServ Server
+#
+Set hostserv_server ............: HostServ.net
+
+# This is the clientname of your NickServ client
+#
+Set nickserv_name ..............: NickServ
+
+# This is the clientname of your ChanServ client
+#
+Set chanserv_name ..............: ChanServ
+
+# This is the clientname of your MemoServ client
+#
+Set memoserv_name ..............: MemoServ
+
+# This is the clientname of your BotServ client
+#
+Set botserv_name ...............: BotServ
+
+# This is the clientname of your RootServ client
+#
+Set rootserv_name ..............: RootServ
+
+# This is the clientname of your OperServ client
+#
+Set operserv_name ..............: OperServ
+
+# This is the clientname of your StatServ client
+#
+Set statserv_name ..............: StatServ
+
+# This is the clientname of your HostServ client
+#
+Set hostserv_name ..............: HostServ
+
+# This is the Hidden Hosts Local Opers will get upon Oper Up.
+#
+Set locop_host .................: LocalOper.net
+
+# This is the Hidden Hosts Global Opers will get upon Oper Up.
+#
+Set oper_host ..................: Oper.net
+
+# This is the Hidden Hosts Guest Admins will get upon Oper Up.
+#
+Set guestadmin_host ............: Guest-Admin.net
+
+# This is the Hidden Hosts Server Co-Admins will get upon Oper Up.
+#
+Set servcoadmin_host ...........: Server-CoAdmin.net
+
+# This is the Hidden Hosts Server Admins will get upon Oper Up.
+#
+Set servadmin_host .............: Server-Admin.net
+
+# This is the Hidden Hosts Tech Co-Admins will get upon Oper Up.
+#
+Set techcoadmin_host ...........: Technical-CoAdmin.net
+
+# This is the Hidden Hosts Tech Admins will get upon Oper Up.
+#
+Set techadmin_host .............: Technical-Admin.net
+
+# This is the Hidden Hosts Network Co-Admins will get upon Oper Up.
+#
+Set netcoadmin_host ............: Network-CoAdmin.net
+
+# This is the Hidden Hosts Network Admins will get upon Oper Up.
+#
+Set netadmin_host ..............: Network-Admin.net
+
+# This is the channel where people can go for help
+# It will be shown in /info aswell as /ircdhelp and /help
+#
+Set helpchan ...................: #SomeIRC
+
+#-------------------------
+# End Of Network Settings
+#-------------------------

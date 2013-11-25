@@ -1,0 +1,58 @@
+ver^2.1.6
+#
+# Test.net Network Configuration File
+# --------------------------------------------
+#
+# $Id: test.network 648 2003-03-17 21:50:29Z againaway $
+
+Set ircnetwork .................: UltimateIRCd-TestNet
+Set ircnetwork_name ............: The UltimateIRCd Test IRC Network
+Set defserv ....................: irc.Test.Shadow-Realm.org
+Set website ....................: http://www.shadow-realm.org/
+Set rules_page .................: http://www.shadow-realm.org/
+Set network_kline_address ......: KLine@shadow-realm.org
+Set mode_x .....................: 1
+Set mode_x_lock ................: 1
+Set clone_protection ...........: 0
+Set clone_limit ................: 10
+Set oper_clone_limit_bypass ....: 1
+Set hideulinedservs ............: 1
+Set global_connects ............: 1
+Set oper_autoprotect ...........: 0
+Set oper_mode_override .........: 3
+Set oper_mode_override_notice ..: 0
+Set users_auto_join ............: 0
+Set opers_auto_join ............: 0
+Set enable_nickserv_alias ......: 1
+Set enable_chanserv_alias ......: 1
+Set enable_memoserv_alias ......: 1
+Set enable_botserv_alias .......: 1
+Set enable_rootserv_alias ......: 0
+Set enable_operserv_alias ......: 1
+Set enable_statserv_alias ......: 1
+Set enable_hostserv_alias ......: 0
+Set services_server ............: Services.net
+Set statserv_server ............: Statistics.net
+Set hostserv_server ............: HostServ.net
+Set nickserv_name ..............: NickServ
+Set chanserv_name ..............: ChanServ
+Set memoserv_name ..............: MemoServ
+Set botserv_name ...............: BotServ
+Set rootserv_name ..............: RootServ
+Set operserv_name ..............: OperServ
+Set statserv_name ..............: StatServ
+Set hostserv_name ..............: HostServ
+Set locop_host .................: LocalOper.net
+Set oper_host ..................: Oper.net
+Set guestadmin_host ............: Guest-Admin.net
+Set servcoadmin_host ...........: Server-CoAdmin.net
+Set servadmin_host .............: Server-Admin.net
+Set techcoadmin_host ...........: Technical-CoAdmin.net
+Set techadmin_host .............: Technical-Admin.net
+Set netcoadmin_host ............: Network-CoAdmin.net
+Set netadmin_host ..............: Network-Admin.net
+Set helpchan ...................: #ShadowRealm
+
+#-------------------------
+# End Of Network Settings
+#-------------------------

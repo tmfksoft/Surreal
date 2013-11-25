@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# To check for your ircd every 10 minutes, put the following line in your
+# crontab:
+#    0,10,20,30,40,50 * * * *   /home/mydir/ircdchk
+# And if you don't want to get email from crontab when it restarts you ircd,
+# put the following in your crontab:
+#    0,10,20,30,40,50 * * * *   /home/mydir/ircdchk >/dev/null 2>&1
+#
+
+# change this to the directory you run your ircd from:
+dir="/home/yourdir/UltimateIRCd/"
+
+# This needs to be the ircd.pid file relative to the dir
+# specified above or by full path.
+ircdname="etc/ircd.pid"
+
+
+########## I wouldnt want to touch anything below this line if i where you. ##########
+
+ircdexe="ircd"
+
+
+cd $dir
+if test -r $ircdname; then
+  # There is a PID file.. lets find out if its alive.
+  ircdpid=`cat $ircdname`
+  if `kill -CHLD $ircdpid >/dev/null 2>&1`; then
+    # Its still running, back out quietly...
+    exit 0
+  fi
+
+  echo "~~~~~~~~~~~~~~~~~~~~~~~~"
+  echo " Stale $ircdname file (erasing it)"
+  rm -f $ircdname
+fi
+
+echo "~~~~~~~~~~~~~~~~~~~~~~~~"
+echo " Your $ircdexe process have died."
+echo " Lets look at the uptime for clues...."
+echo "~~~~~~~~~~~~~~~~~~~~~~~~"
+uptime
+echo "~~~~~~~~~~~~~~~~~~~~~~~~"
+echo " Now attempting to bring it back to life"
+./$ircdexe
+exit 0

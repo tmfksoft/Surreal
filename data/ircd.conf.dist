@@ -1,0 +1,331 @@
+#=========================# UltimateIRCd #=========================#
+#
+# UltimateIRCd conf/ircd.conf.dist
+# $Id: ircd.conf.dist 876 2005-02-09 19:39:30Z shadowmaster $
+#
+# This is the configuration file for UltimateIRCd3.0.0 and later.
+# For detailed explanation please consult the example.conf file
+#
+#=================================================================#
+
+
+
+#=========================# Server Info #=========================#
+#
+# M:hostname:IP:Description Of Your Server:7000
+#
+# Example (ipv4):
+#
+# M:WhiteRose.No.Eu.Shadow-Realm.org:195.159.32.103:Whiterose Internet Services:7000
+#
+# Example (ipv6):
+#
+# M:WhiteRose.No.Eu.Shadow-Realm.org:[::ffff:195.159.32.103}:Whiterose Internet Services:7000
+# M:WhiteRose.No.Eu.Shadow-Realm.org:[ffff:ab46::1}:Whiterose Internet Services:7000
+#
+# Note (ipv6): If you want to link to ipv4 servers use an ipv4 as primary address.
+#              (bind the ipv6 via P lines)
+#
+
+
+#=========================# Admin Info #=========================#
+#
+# A:info field:info field:info field
+#
+# Example:
+#
+# A:WhiteRose Administration:Lazy Admin:<LazyAdmin@Badly.Configured.Servers.net>
+#
+
+
+#=========================# Y-Lines #=========================#
+#
+# Y:Class Number:Ping Frequency:Connect Frequency:Max Links:SendQ
+#
+# The following Y Line sets can safely be used by default.
+#
+# 50 ===== Hub <--> Hub
+# 51 ===== Hub <--> Hub, AutoConnect
+# 60 ===== Hub <--> US Leaf
+# 61 ===== Hub <--> EU Leaf
+# 62 ===== Hub <-> AU leaf
+# 40 ===== US leaf <--> Hub, AutoConnect
+# 41 ===== EU leaf <--> Hub, AutoConnect
+# 42 ===== AU leaf <--> Hub, AutoConnect
+# 30 ===== US leaf <--> Hub
+# 31 ===== EU leaf <--> Hub
+# 32 ===== AU leaf <--> Hub
+#
+# 10 ===== Administrators
+# 5  ===== IRC Operators
+# 1  ===== Default Client Class
+#
+
+Y:50:90:60:0:4000000
+Y:51:90:60:1:4000000
+
+Y:60:90:0:0:3500000
+Y:61:180:0:0:3500000
+Y:62:300:0:0:3500000
+
+Y:40:90:90:1:3500000
+Y:41:180:90:1:3500000
+Y:42:300:120:1:3500000
+
+Y:30:90:90:0:3500000
+Y:31:180:90:0:3500000
+Y:32:300:120:0:3500000
+
+Y:10:90:0:20:400000
+Y:5:90:0:20:400000
+Y:1:90:0:1000:100000
+
+
+
+#=========================# I/Access Lines #=========================#
+#
+# I:IP-Adress-Mask:optional password:domain-mask::connection class (opt)
+#
+# This ILine will allow anyone to connect to your server and will put all
+# connecting clients in connection class 1
+#
+
+I:*::*@*::1
+
+
+
+#=========================# O-Lines #=========================#
+#
+# o = Local oper
+# O = Global operator
+#
+# a = Services operator
+# P = Services administrator
+# Z = Services root administrator
+#
+# j = Guest administrator
+# J = Server co administrator
+# A = Server administrator
+# t = Technical Co Administrator
+# T = Technical Administrator
+# n = Network co administrator
+# N = Network administrator
+#
+# Remember that administrators also need a J line on all
+# servers they want to issue remote commands to.
+# (Not yet in use)
+#
+# b = Access to do /kline and /unkline
+# c = Access to do local /connects and /squits
+# C = Access to do remote /connects and /squits
+# k = Access to do local /kills
+# K = Access to do global /kills
+# r = Access to do /rehash server
+# R = Access to do /restart
+# D = Access to do /die
+#
+# p = Oper can set +p (Protected IRC Operator)
+# h = Oper can set +h (Help Operator)
+#
+# w = oper can send /wallops
+# l = Oper can send local server notices (/notice $servername message)
+# g = Oper can send global notices (/notice $*.network.net message)
+#
+# E = Oper can use /add and /del commands from IRC if enabled by the admin.
+#
+# O:hostname (ident "@" permitted):password:Login:Access Flags:class
+#
+# Examples (ipv4):
+#
+# O:*:GooFeR:serveradministrator:OAbcCkKrRDphwlgE:10
+#
+# O:*:INsaNIty:localop:obckl:5
+#
+# Examples (ipv6):
+#
+# O:*:GooFeR:serveradministrator:OAbcCkKrRDphwlgE:10
+# O:[*]:INsaNIty:localop:obckl:5
+# O:[*@::ffff:127.0.0.1]:again:evilguy:DARK:5
+# O:[*@adab:a447:234a::5467]:bastard:niceguy:NbcCdrRDhwlgE:5
+#
+
+
+
+#=========================# J-Lines #=========================#
+#
+# J:*::OperNick::
+#
+# Example:
+#
+# J:*::ShadowMaster::
+# J:*::Againaway::
+#
+
+
+
+#=========================# X-Line #=========================#
+#
+# X:Die Password:Restart Password
+#
+
+X:MyDiePass:MyRestartPassword
+
+
+
+#=========================# U-Lines #=========================#
+#
+# U:Server Name:*:*::
+#
+# Example:
+#
+# U:services.shadow-realm.org:*:*::
+#
+
+
+#=========================# Connect Lines #=========================#
+#
+# 50 ===== Hub <--> Hub
+# 51 ===== Hub <--> Hub, AutoConnect
+# 60 ===== Hub <--> US Leaf
+# 61 ===== Hub <--> EU Leaf
+# 62 ===== Hub <-> AU leaf
+# 40 ===== US leaf <--> Hub, AutoConnect
+# 41 ===== EU leaf <--> Hub, AutoConnect
+# 42 ===== AU leaf <--> Hub, AutoConnect
+# 30 ===== US leaf <--> Hub
+# 31 ===== EU leaf <--> Hub
+# 32 ===== AU leaf <--> Hub
+#
+# Link Flags:
+# E == Encrypted links (Requires encryption to be enabled during ./configure)
+# Z == Compressed links
+#
+# C:remote server's hostname:password:remote server's name:port:conn class
+# N:remote server's hostname:password:remote server's name:link flags:conn class
+#
+# Examples (ipv4):
+#
+# C:231.156.12.103:Services!goof:Services.Shadow-Realm.org:*:50
+# N:231.156.12.103:Services!goof:Services.Shadow-Realm.org::50
+#
+# C:231.156.34.213:broken!sword:Hub2.Shadow-Realm.org:7000:51
+# N:231.156.34.213:broken!sword:Hub2.Shadow-Realm.org:ZE:51
+#
+# Examples (ipv6):
+#
+# C:[::ffff:231.156.12.103]:Services!goof:Services.Shadow-Realm.org:*:50
+# N:[::ffff:231.156.12.103]:Services!goof:Services.Shadow-Realm.org::50
+#
+# C:[ffff:ad46::1]:broken!sword:Hub2.Shadow-Realm.org:7000:51
+# N:[ffff:ad46::1]:broken!sword:Hub2.Shadow-Realm.org:ZE:51
+#
+
+
+#=========================# Hub Lines #=========================#
+#
+# H:servers which are permitted entry::hub server::
+#
+# Examples:
+#
+# H:*::Services.Shadow-Realm.org::
+#
+# H:*.Shadow-Realm.org::Hub2.Shadow-Realm.org::
+#
+
+
+#=========================# Leaf Lines #=========================#
+#
+# L:disallow connections to this hostmask::server name:depth
+#
+# L:*.uk::*.au:
+#
+# L:*::Wintermute.Shadow-Realm.org:1
+#
+
+
+#=========================# Port Lines #=========================#
+#
+# P:Allowed address mask:IP to bind to::port to listen on
+#
+# Examples (ipv4):
+#
+# P:*:195.159.32.103::6660
+#
+# P:195.159.*:195.159.32.103::8888
+#
+# Examples (ipv6):
+#
+# P:[*]:[::ffff:195.159.32.103]::6660
+#
+# P:[facd:3dab:adfe:*]:[facd:3dab::687a]::6668
+#
+# Examples (SSL):
+#
+# P:195.159.*:195.159.32.103:SSL:6660
+# P:[facd:3dab:adfe:*]:[facd:3dab::687a]:SSL:6668
+#
+
+
+#=========================# Quarantine Nick Lines #=========================#
+#
+#  Q:*:reason why quarantine is in place:nickname
+#
+
+Q:*:Reserved for real IRC Operators:*IRCop*
+Q:*:Reserved for services:*C*h*a*n*S*e*r*v*
+Q:*:Reserved for services:*N*i*c*k*S*e*r*v*
+Q:*:Reserved for services:*M*e*m*o*S*e*r*v*
+Q:*:Reserved for services:*O*p*e*r*S*e*r*v*
+Q:*:Reserved for services:*H*e*l*p*S*e*r*v*
+
+
+
+#=========================# Kill Lines #=========================#
+#
+# K:hostmask:reason:username
+#
+# Examples:
+#
+# K:*lamuhz.hackerinc.net:Causing all sorts of problems:*
+#
+# K:*:Dont IRC as root:root
+#
+
+
+#=========================# Zap Lines #=========================#
+#
+# Z:IP mask:reason for zapping:*
+#
+# Example (ipv4):
+#
+# Z:199.234.13.*:Insecure shell box responsible for massive clone attacks:*
+#
+# Example (ipv6):
+#
+# Z:[::ffff:199.234.13.*]:Insecure shell box responsible for massive clone attacks:*
+# Z:[3ffe:1337:1337:1337:*]:for abuseing our services:*
+#
+
+
+#=========================# Exempt Lines #=========================#
+#
+# E:hostmask::username
+#
+# Please note it would be very smart to keep the list of E lines as
+# short as possible.
+#
+# Example:
+#
+# E:Tsunami.Shadow-Realm.org::darkshadow
+#
+
+
+#=========================# Super Exempt Lines #=========================#
+#
+# F:hostname::username
+#
+# Example:
+#
+# F:Arcadia.Shadow-Realm.org::shadow
+#
+

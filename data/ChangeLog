@@ -1,0 +1,7 @@
+ircd.ini ChangeLog.
+
+1.1.2:
+
+Added:
+max_channels_per_user
+

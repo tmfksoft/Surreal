@@ -1,0 +1,46 @@
+UltimateIRCd O-Line Flags
+----------------------------------------
+
+$Revision: 524 $
+
+
+############ O Line Access Flags #############
+#
+# o = Local oper
+# O = Global operator
+#
+# a = Services operator
+# P = Services administrator
+# Z = Services root administrator
+#
+# j = Guest administrator
+# J = Server co administrator
+# A = Server administrator
+# t = Technical Co Administrator
+# T = Technical Administrator
+# n = Network co administrator
+# N = Network administrator
+#
+# Remember that administrators also need a J line on all
+# servers they want to issue remote commands to.
+# (Not yet in use)
+#
+# b = Access to do /kline and /unkline
+# c = Access to do local /connects and /squits
+# C = Access to do remote /connects and /squits
+# k = Access to do local /kills
+# K = Access to do global /kills
+# r = Access to do /rehash server
+# R = Access to do /restart
+# D = Access to do /die
+#
+# p = Oper can set +p (Protected IRC Operator)
+# h = Oper can set +h (Help Operator)
+#
+# w = oper can send /wallops
+# l = Oper can send local server notices (/notice $servername message)
+# g = Oper can send global notices (/notice $*.network.net message)
+#
+# E = Oper can use /add and /del commands from IRC if enabled by the admin.
+#
+##############################################

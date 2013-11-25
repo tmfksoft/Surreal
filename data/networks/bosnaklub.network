@@ -1,0 +1,57 @@
+ver^2.1.6
+#
+# BosnaKlub IRC Network Configuration File
+# --------------------------------------------
+#
+
+Set ircnetwork .................: BosnaKlub
+Set ircnetwork_name ............: BosnaKlub IRC NETWORK
+Set defserv ....................: irc.bosnaklub.com
+Set website ....................: http://www.BosnaKlub.Com/
+Set rules_page .................: http://www.bosnaKlub.Com
+Set network_kline_address ......: Administar@bosnaklub.com
+Set mode_x .....................: 1
+Set mode_x_lock ................: 1
+Set clone_protection ...........: 1
+Set clone_limit ................: 5
+Set oper_clone_limit_bypass ....: 1
+Set hideulinedservs ............: 1
+Set global_connects ............: 1
+Set oper_autoprotect ...........: 1
+Set oper_mode_override .........: 3
+Set oper_mode_override_notice ..: 0
+Set users_auto_join ............: 0
+Set opers_auto_join ............: 0
+Set enable_nickserv_alias ......: 1
+Set enable_chanserv_alias ......: 1
+Set enable_memoserv_alias ......: 1
+Set enable_botserv_alias .......: 1
+Set enable_rootserv_alias ......: 1
+Set enable_operserv_alias ......: 1
+Set enable_statserv_alias ......: 1
+Set enable_hostserv_alias ......: 0
+Set services_server ............: Servisi.BosnaKlub.Com
+Set statserv_server ............: Statistike.BosnaKlub.Com
+Set hostserv_server ............: HostServ.BosnaKlub.Com
+Set nickserv_name ..............: NickServ
+Set chanserv_name ..............: ChanServ
+Set memoserv_name ..............: MemoServ
+Set botserv_name ...............: BotServ
+Set rootserv_name ..............: RootServ
+Set operserv_name ..............: OperServ
+Set statserv_name ..............: StatServ
+Set hostserv_name ..............: HostServ
+Set locop_host .................: osiguranje-bosnaklub.com
+Set oper_host ..................: osiguranje-bosnaklub.com
+Set guestadmin_host ............: osiguranje-bosnaklub.com
+Set servcoadmin_host ...........: osiguranje-bosnaklub.com
+Set servadmin_host .............: osiguranje-bosnaklub.com
+Set techcoadmin_host ...........: osiguranje-bosnaklub.com
+Set techadmin_host .............: osiguranje-bosnaklub.com
+Set netcoadmin_host ............: osiguranje-bosnaklub.com
+Set netadmin_host ..............: osiguranje-bosnaklub.com
+Set helpchan ...................: #pomoc
+
+#-------------------------
+# End Of Network Settings
+#-------------------------

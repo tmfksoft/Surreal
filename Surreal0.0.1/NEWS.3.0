@@ -1,0 +1,701 @@
+Symbols:
+(SM) - ShadowMaster (ShadowMaster at Shadow-Realm dot org)
+(AA) - Againaway (Againaway at Shadow-Realm dot org)
+(JH) - Fish (Fish at Shadow-Realm dot org)
+(BP) - Bahamut team Patches to bahamut
+(QN) - Quinn (Quinn at ShadowRealm Forums)
+(PH) - Phealy (Phealy at Shadow-Realm dot org)
+(RD) - Radiant (Radiant at Shadow-Realm dot org)
+
+3.0.1
+=== Features ===
+ (RD) Debugmode now works for Win32.
+
+=== Bugfixes ===
+ (SM) Fix bug where global connect notices would cause flooding during synchs.
+ (SM) Fix bug allowing non SSL enabled clients to set a channel +S.
+ (SM) Fix read_* functions to prevent the last line in ircd.rules etc to be repeated.
+ (SM) The configureflag --enable-debug has been renamed --enable-debugmode, and works now.
+ (SM) If no "msg" directive is set in channels.conf, use a default message instead of disabling
+          channel restrictions entirely. (#0000034)
+ (SM) Compile fixes for SunOS 5.8 on sparc.
+          Reported by Hirop @ IRCHighway
+ (RD) Several compile fixes for Win32.
+ (RD) Fixed an incorrectly opened FD in the Win32 resolver code.
+
+
+3.0.0
+ (PH) Fixed a few grammatical errors in messages.
+ (PH) Fixed server output on /REHASH CHANNELS.
+      Reported by Christian Gayer.
+ (SM) Properly kill off uneccecary warnings on systems where openssl
+         has OPENSSL_NO_KRB5 already defined.
+ (AA) Notify the opers in case that a leaf refuses a second link because
+      of his 'non-HUB' status. (#0000036)
+ (AA) Removed the SOCKS-Proxy checker. (#0000035)
+      We recomend that you use a dedicated insecure detection tools like
+      bopm - http://www.blitzed.org/bopm/
+      NetworkBOPM - Our svn(!) http://svn.shadow-realm.org:7100/svn/NetworkBOPM/
+ (AA) Fixed the Syslog stuff.
+	 It didnt compile with USE_ADD_LINES_SYSLOG defined.
+	 USE_ADD_LINES_SYSLOG is now renamed to SYSLOG_ADDLINES.
+	 SYSLOG_KILL will also log klines.
+ (AA) Fixed the commandline help.
+ (SM) Numerous options moved from include/config.h to the configure script.
+      See ./configure --help for details.
+ (SM) Numerous updates to /IRCDHELP from Christian 'cg' Gayer (cg at dexit dot de)
+
+
+rc3
+ (SM) Fixed major issue causing thrashing of the user hashtables
+      due to missing return call introduced in rc2.
+ (SM) SSL clients that are FLined and joining when server is full will now correctly
+      be able to connect. (#0000037)
+ (SM) Non SSL clients can no longer be invited into +S channels and
+      thus make them insecure. (#0000024)
+
+
+rc2
+ (SM) template.network is now correctly installed on "make install".
+      Reported by cg @ SRC Forums.
+ (SM) Fix some typos and make some clarifications to /IRCDHELP.
+      Reported by Phealy @ SRC IRC.
+ (SM) Fix a compile issue with the kqueue socket engine on older compilers.
+      Reported by several.
+ (SM) Update the FAQ location. Now web based and more up to date.
+ (PH) Applied patch from Christian 'cg' Gayer to bring /IRCDHELP more up to date
+      and updates all entrys to proper functions.
+ (SM) Fixed a major bug introduced in RC1 leading to severe user timestamp desynchs
+      and potentially other serious problems.
+ (SM) Added proper error messages to SVSMODE so opers will be alerted to problems.
+ (PH) Fixed bug #0000027 causing both QUIT and PART to be seen under some circumstances.
+ (SM) Moved source repository from SourceForge CVS over to a Subversion server. 
+
+
+rc1
+ (BP) Fixed entropy generation on OpenBSD and cleaned up status messages (from Mark19960)
+ (BP) Fixed crash on /stats request from a server (from Mark19960)
+ (BP) Fixed cosmetic errors in nick collision kills (from Goplat)
+ (SM) Fixed cosmetic errors in bogus akill time rejection message.
+ (SM) DNS Debug and Debug is now disabled by default.
+ (SM) Fixed a bug causing SSL clients to get disconnected under some
+      circumstances when reverse and forward DNS mismatched. (#0000028)
+ (SM) No longer display real IP/Host of operator issuing /DIE in +s notices. (#0000032)
+ (SM) Fixed erronous behaviour caused by improper error checking on number of parameters
+      for FMODE. Also added proper error messages for too few parameters given. (#0000033)
+ (QN) Fixed VHOST and SETHOST to prevent RFC breakage. (#0000029)
+ (QN) Fixed NMODE +g not unsetting on deoper. (#0000002)
+ (BP) Bugfixes to KQueue engine by Quension.
+ (SM) Port devpoll and epoll socket engines from Bahamut-Release.
+ (SM) Upgrade bundled ZLib to 1.2.1.
+ (SM) EOBURST added to allow the servers network wide to be aware of when a server is fully
+      synched to the network. This also allows us to generate global (Far) connect notices
+      locally. Once the entire network is running RC1 or higher you may safely change
+      "global_connects" to 0 in your networks settings file. RC1 will happily propogate
+      global connect notices for older versions.
+ (SM) Fix a legacy TS issue in m_nick negotiation. Fix taken from Bahamut, originally from Hybrid.
+
+
+beta3
+ (SM) Fixed a bug on +M channels where +r was removed before the error checks on if
+      a nickname could be changed, causing the nickchange to fail and leaving the client
+      set -r. (#0000025)
+ (SM) Fixed a bug preventing Local Operators from altering their NMODES.
+      Reported by DaPrivateer @ Irchighway.net
+ (SM) Fixed several Oper checks which should have checked for IsAnOper instead of IsOper.
+ (SM) Backwards compactibility for non NICKIP removed.
+ (SM) Removed all the old code mess from m_oper.
+ (SM) Opers are set with usermode +W again upon oper up.
+ (SM) Opers are now NOT set with NMODE +R upon oper up.
+ (SM) Moved NMODE to its own RPL_ numeric, 220 and
+      changes will now be sent to the client by NMODE, not MODE + (+nmodes).
+      This to address an issue with some clients being confused by the second
+      string of modes.
+      Reported and patched by DaPrivateer @ Irchighway.net
+ (SM) Really fix Channelmode +A and +O permissions. (#0000026)
+ (SM) Allow ULined servers to set channelmode +S.
+      Reported by DaPrivateer @ Irchighway.net
+ (SM) UltimateIRCd will now compile on OpenBSD 3.5 cleanly.
+      Many thanx to Quension for his Bahamut OpenBSD fixes and
+      ScottyDogg for providing me with a testbed.
+
+
+beta2
+ (SM) Fixed a pesky compiler warning for rc4.c
+ (SM) Fixed error message for too high maxclients.
+      Reported by Dodger @ Wildghosts.net
+ (SM) Fixed error where maxclients where set to high during automatic detection
+      in ./configure. Fortgot to take spare buffers into account. (#0000023)
+
+ 
+beta1
+ (SM) Added test.network for the UltimateIRCd test network.
+ (SM) Added IPv6 patches from the IRC-Chat IPv6 effort.
+ (SM) Fixed potential desynch issue in the SJOIN code.
+      This could be related to the issue reported by
+      Neo @ SRC IRC.
+ (BP) Fix "ghost channels", an annoying form of desynchs.
+ (SM) OpenSSL is now correctly detected and used on systems
+      with custom OpenSSL paths.
+ (SM) IPv6 support is now enabled using --enable-ipv6 for configure.
+ (SM) Removed TS3 support. It shouldnt be used anymore in any case.
+ (SM) Removed SSJ3 and SSJ4 support. It shouldnt be used anymore.
+      This WILL cause problems if you try to run on a network with
+      older versions than at least a26, preferably you should never mix
+      with anything older than the last released development release.
+ (SM) Oper up notices now report the correct OLine flags.
+      Reported by several.
+ (SM) Fixed send_lusers whining about invisible user count being off.
+      Reported by several.
+      Tested and patched by K. Hawkes (k dot hawkes at zombies dot force9 dot net)
+ (SM) Now give off warnings when a bogus akill is recieved to alert online staff
+      that their AKILL system is sending out bad AKILL's.
+ (BP) Rewrite of the main IO loop.
+ (BP) New socket engine with support for select, poll and kqueue.
+ (BP) Fix bug preventing KLines/AKills on xxx.xxx.xxx.x* IP masks.
+ (SM) Reworked the compile/install process. The IRCd will by default be installed in
+      ~/UltimateIRCd when you issue make install. Please note, if you do not use
+      make install you will now have to install the IRCd manually according to the
+      paths given to configure.
+ (AA) You should now be able to link an IPv6 enabled server to an Non IPv6 enabled server.
+ (AA) SETHOST's issued by opers are now announced network wide.
+ (SM) Fixed a possible desynch with +nt modes on channels.
+ (SM) Corrected permission checking for +O and +A channel modes.
+      Reported by K. Hawkes (k dot hawkes at zombies dot force9 dot net)
+ (SM) Main services aliases now /CS, /NS, /MS, /BS etc. Long aliases keept for
+      compactibility.
+ (SM) Max clients are now set using the --with-maxclients= parameter for configure.
+ (BP) Do not send server already exsist notices to operators for servers that
+      appear to be juped.
+ (AA) Added /hs and /hostserv aliases as well as the facility to set an hostserv name.
+ (SM) Ported SVSJOIN from 2.8.x.
+ (JH) Fixed an issue when compiling with SSL on RedHat 9.
+ (SM) Added Chinese Nickname support. Code provided by laowang @ SRC Forums.
+      As i have no way to test this its entirely unsupported and i only have
+      laowang's word that it functions.
+ (AA) IPv4 servers are now able to handle IPv6.
+ (AA) Its not longer possible to change the same mode multiple times for the same target.
+      (within the same mode change) Except for (Ulined) Servers.
+ (AA) Added /stats x support. Stats x will show all missing links where the server
+      has C/N lines to.
+ (AA) Akills are now working again. (for ipv6)
+ (AA) IPv6 is ready for public use. Its tested but keep your eyes open for bugs.
+      For the services coders out there:
+      To support Ultimate3 with IPv6 you should support Client. If you announce
+      your services to be IPv6 Capable they will get the IP's plain. Which
+      should be easy to handle. If you have any questions throw an email at me.
+ (JH) Cleaned up the include file hell so that Ultimate can compile with
+      -Wall. There are still a few outstanding warnings that need to be
+      looked into with -pedantic though
+ (SM) Fixed channel QLines.
+      Reported by Mortalica & Fizzwizz @ SRC Forum.
+ (QN) Added 'set_oper_access' sub-routine to deal with oper access flags,
+      setting of hostmasks and such, all stuff that used to be in m_oper.
+ (QN) Added 'make_opervirthost_acc' to accompany above routine.
+ (QN) Patched opermotd bug that showed a non-existant date if no oper-motd had ever been created.
+ (QN) Patched same bug as above, but with 'motd' too.
+ (SM) Added /CHANFIX to allow Administrators to resynch the timestamp on channels
+      who for one reason or another have had their timestamp set to an invalid value.
+      /CHANFIX <channelname>
+ (SM) Added usermode +d (deaf client) to which allows bots to be deaf to channel traffic.
+ (SM) Added NMODE (Notice Mode) to replace several old user modes.
+      See /IRCDHELP NMODES and /IRCDHELP NMODE for details.
+ (SM) Ported usermode +R from bahamut-release to disallow non registered users to send private messages.
+ (SM) Ported channelmode +M from bahamut-release to disallow non registered users to send messages to channel.
+ (SM) Added missing error check for port in MLine.
+ (QN) Fixed opermotd, rules, motd, shortmotd and help corruption issues.
+ (SM) Added channelmode +q to allow channels to supress QUIT and PART messages.
+      This has the side effect of causing the client to always part a channel when issuing QUIT, but it does
+      disallow spam in PART and QUIT
+ (AA) Opers who go /away dont lose +h. But they are not shown as "available for help"
+      as long as they stay away. (fix for +h not getting set after unaway)
+ (AA) Added additional error checking to the m_del* commands.
+      This hopefully fixes the the config file corruption if the ircd is out
+      of disksapce.
+ (SM) Fixed Guest admins to propogate properly again. (#0000014)
+ (SM) Some cleanups for glibc 2.3 systems.
+ (SM) Some fixes for x86_64 systems.
+ (SM) Moved drone checks to after all ban checks are complete to avoid notice flooding in some instances.
+      Reported by Dodger @ whildghosts.net
+ (AA) Fixed an abort() on /stats w
+ (AA) Fixed the P:lines for IPV6 (they still worked for ipv4) (#0000006)
+ (BP) Bugfix for kqueue engine.
+ (SM) OpenSSL now defaults to off.
+ (SM) Non Channel Staff who try to view the banlist will now recieve an empty banlist instead of an error message
+      as most clients automatically try to fetch the banlist upon joining a channel.
+ (SM) Fixed crash introduced by some of the cleanups carried out a while ago by Fish (#0000020)
+ (SM) Fixed an issue with ircsprintf family under x86_64. Many thanx to David Ranger for helping
+      me track this problem down and for providing a fix for it.
+ (SM) Ported SVSPART from 2.8 branch.
+ (SM) Added USERIP, an IP only version of USERHOST except for users with hiddenhosts.
+ (SM) Disabled channelmode +q for b1 due to some lingering issues.
+ 
+
+alpha30
+ (SM) Fixed the example OLine in ircd.conf.dist
+      Reported by Mortalica @ SRC IRC.
+ (SM) Fixed some typos in vareous areas of the source.
+      Reported by sidewinder @ SRC Forum.
+ (SM) Remove assert from get_block in blalloc.c.
+ (SM) Fix typo in struct.h
+      Reported by reticent @ SRC Forum
+ (SM) Clarified the NO_CHANOPS_ON_SPLIT question during ./config
+
+
+alpha29 (Last one hopefully.. again)
+ (SM) Fixed default YLines in ircd.conf.dist.
+      Reported by JH @ irc-chat.net
+ (SM) Non opers are no longer able to set +W
+      Reported by Quinn @ SRC Forums
+ (SM) Removed debug notices for SMODE left in by accident.
+      Reported by JH @ irc-chat.net
+ (BP) Fix a few things to make synching over localhost instantaneous
+      instead of really damn slow.
+ (SM) Fixed ircncmp.
+ (SM) Updated oline flags in example.conf.
+      Reported by thepitster @ irc-chat.net
+ (SM) Added ERR_SERVERONLY numeric 480 to return errors on commands
+      clients do not have access to use.
+ (SM) Fixed several bugs related to SMODE propogation.
+      Reported by several.
+ (SM) Fixed several issues in /MODE pertaining to usermodes.
+      Non opers where able to set themselves +h, +F, +k, +g
+      under some circumstances.
+      Reported by JH.
+ (SM) DRONE protection now have the warnings disabled by default
+      using a define in config.h.
+      When defined it will only send warnings to local opers.
+      Network wide warnings are still sent when the actual protection is triggered.
+ (SM) /LUSERS will no longer count ULined clients at all towards network max or online operators.
+ (BP) Fixed a bug causing linking servers to remove the key from channels.
+ (SM) Fixed typo in WHOIS for technical administrators.
+      Reported by ErroR|51 @ irc-chat.net
+ (SM) Updated the 005 numeric to conform to the RPL_ISUPPORT draft by E. Brocklesby.
+      Draft included in the doc/ dir.
+      Code borrowed from hybrid-7.
+ (SM) Prepared /TOPIC for recording the nick!user@host of a user instead of only nickname.
+      This will not be active until next release.
+
+
+alpha28
+ (SM) IMPORTANT
+      More OLine flag cleanups.
+      This means you MUST update your OLine flags.
+ (SM) /WHOWAS now displays numeric 671 instead of 670 for realhosts.
+ (SM) Numeric 211 (stats L/?) now returns the unix time for when the client/server connected instead
+      of the seconds since it connected.
+ (SM) /VERSION now returns CASEMAPPING and not CHARMAPPING
+ (SM) Added MMAP support ported from hybrid 6 originally by Aaron Sethman (androsyn at ratbox dot org)
+ (BP) Added RESYNCH to allow servers to resynch themselves in an SJOIN that creates a channel.
+ (BP) All ULined servers are now protected from /KILL
+ (BP) Fixed a bug pertaining to checking for expiring akills/klines.
+ (BP) res.c optimizations.
+ (SM) Fixed the "IP reversal" issue from a27.
+ (SM) Users may now set themselves -x on MODE_x networks.
+ (SM) Added ircd.ini setting for MAXCHANNELSPERUSER (max_channels_per_user).
+ (SM) Added network settings option to disallow users from going -x on the network. (mode_x_lock).
+ (SM) Version mismatches in the ircd.ini and network settings files are no longer fatal
+      and error checking will take care of setting missing values to default.
+ (SM) Fixed a bug allowing non opers to set +F.
+
+
+alpha27
+ (SM) IMPORTANT
+      U and H line format have been altered:
+      U:Server Name:*:*::
+      H:servers which are permitted entry::hub server::
+      The :: at the end are now REQUIRED in order to make U and H lines
+      work properly.
+ (SM) Please note that the network settings file have had some changes, see the ChangeLog in conf/networks
+      for details. Also note that the network settings file will change a little over the coming releases.
+ (SM) Fixed cosmetical error in whois reply for services clients.
+      Reported by Mortalica.
+ (SM) SMODE protocol finished. (Server <-> server mode system)
+ (BP) Ban munching bug fixed.
+ (BP) We now send a notice to +d opers if we are going to overflow MAXPARA.
+ (SM) UltimateIRCd should now compile cleanly on Linux PowerPC systems.
+ (SM) Fixed an instance where /WHO would show = instead of I as the flag for users
+      you see as an oper that are invisible.
+ (BP) Fixed an old archaic bug with M line port.
+ (BP) Fixed bug in blockheaps garbage collect.
+ (SM) Fixed ULine matching properly.
+ (SM) Walk the fdlist backwards in m_akill, m_kline and m_szline to prevent double
+      calling exit_client for the same client where exit_client have not yet been able
+      to modify the fdlist index. Thanx Agy :)
+ (SM) Added J-Lines which will be used to define which nicknames may preform remote
+      commands on other servers.
+      Format: J:*::nickname::
+      The nickname will need to be registered and identified with services in order to be allowed
+      to issue commands. (Not used for anything yet. Will be used for remote rehash etc)
+ (SM) Added ClientSSL thanx to the Bahamut SSL patch by Rossi Marcello.
+      ClientSSL is enabled by default and must be disabled using --disable-openssl while running ./configure
+      if you do not have SSL availible. You can also specify an alternate source for the SSL library using
+      --enable-openssl=PATH
+      To set a port as to accept SSL connections you use the following PLine syntax:
+      P:ip range to allow:ip to bind to:SSL:port
+ (SM) Removed the GNU MP dependency for server <-> server encryption. Now depends on OpenSSL
+      instead. Patch taken from Bahamut-devel. aka OpenSSL ala Lucas.     
+ (SM) Completely reworked /USERHOST. It now will correctly return NOSUCHNICK for bad nicknames and will NOT return
+      empty 302 replies. It also now returns Realhostself since some clients depend on this.
+      It also returns WHOISHOST for IRC Operators.
+      Reported by Virus @ Novernet
+ (SM) Cosmetical changes to certain WHOIS reply's to make them more easilly parseable by clients and scripts.
+ (SM) /MODE no longer allows modefloods with multiple +/-k and +/-l on channels.
+ (SM) HalfOps can no longer kick other HalfOps.
+      Reported by Anomy @ SRC.
+ (SM) Added +S channels for SSL Clients Only.
+ (SM) Added +A channels for Administrators only.
+ (SM) Newly created channels will now have modes +nt set by default.
+ (SM) Cosmetical fixes to several error replies dealing with channels.
+      Reported by JH @ irc-chat.net
+ (SM) Fixed a bug that could lead to users being able to join keyed channels with invalid keys.
+ (SM) Fixed several bugs related to WATCH's hash table.
+ (SM) Fixed several bugs in NICK's checks related to if oldnick was the same as newnick.
+ (SM) Fixed several other similiar bugs while auditing the use of irccmp (formerly mycmp).
+ (SM) renamed irccmp to irccmp_lex and rewrote irccmp and ircncmp as most things in IRCd
+      does indeed not use lexiographical checking.
+ (SM) Borrowed hybrid7's match() and collapse() as they are much more cleanly done and more
+      efficient from what i can tell than the old bahamut equivalents.
+ (BP) Profiling fixes.
+ (SM) Hybrid style drone protection added. Ported from Hybrid 6 stable tree.
+ (BP) Complete rewrite of the kline/akill/zline system. (s)zlines no longer exist.
+      K: lines set on IP addresses without username portions (or *) are treated as Z: lines used to be.
+      CIDR banning is now supported in all K: line/akill bans (ie, 204.127.54.112/28).
+ (BP) Source address support on /connect problem fixed.
+ (BP) Moved rejection notices to umode +j (re_j_ection).
+ (SM) E and F lines should now work fully.
+      E lines exempt from K and G lines (Z lines no longer exsist) and throttles.
+      F lines exempt from user limits.
+      It is highly recomended to keep the list of E and F lines short.
+      E lines have to be set on *@IP in order to work against Throttles and kill lines in the form
+      of *@IP or IP.
+ (SM) ChannelModes aohv was NOT listed as a supported channel mode during connection which breaks
+      clients depending on it like IRCLE.
+      Reported by (Onno at ircle dot com)
+ (SM) More cosmetical fixes to WHO and USERHOST realhost replies.
+ (SM) Fixed /INVITE so you can actually invite users into +S, +R and +A channels as intended.
+ (SM) Cleaned up /JOIN handeling for +R channels.
+ (SM) Fixed a bug causing IRC Services using the bahamut protocol to not see SJOIN's.
+      Reported by Delta_5 @ SRC Forums.
+ (SM) IRCd will now compile if ENABLE_THROTTLE is disabled.
+      Reported by Delta_5 @ SRC Forums.
+ (SM) /STATS c/C are now fully oper only and will display IP's to administrators.
+ (SM) /SILENCE now matches against hiddenhosts correctly.
+      Reported by Mortalica.
+ (SM) OLine flags have been updated. Several old flags have been removed as they served no real
+      purpose in restriction and the TechAdmin and TechCoAdmin flags have been added.
+      See the ircd.conf.dist or doc/olineflags for more info.
+ (SM) NO_CHANOPS_WHEN_SPLIT and REJECT_ACEBOTS are now controlled by ./config
+ (SM) Made the rejection notice for ACEBOTS more usefull for real clients.
+      Suggested by Noam.
+
+
+alpha26
+ (SM) Server will now send out the correct error string when you cannot join a channel when you are
+      banned, trying to join an invite only channel etc.
+ (SM) ! is now used for Channel Administrators since someone quite correctly pointed out that
+       was in the extended ascii range and would not work as intended on all systems.
+ (SM) 'I' is now used in /who to designate a user who is invisible. (Oper only)
+ (SM) = is now used in /names and /whois to designate a user or channel which you would not see
+      if you where a normal user. (Oper only)
+ (SM) FMODE now also sends a notice to channel staff that fmode have been used to further deter abuse.
+ (SM) FMODE and FJOIN now sends netglobal notices instead of global and netinfo.
+
+
+alpha25
+ (AA) The kill notice contains now the full serverpath
+ (AA) Fixed the /ADDOPER /DELOPER commands .. they didnt work correct
+ (AA) Fixed the oper-up notice for "normal opers" (missing opernick)
+      Reported by anomy
+ (AA) Minor F-Line support will work against akills, szlines, zlines, and klines
+      Take care ! Only your current connection is exempted if you are trying to
+      reconnct you may be banned. But it will help you to survive a wrong kline.
+ (BP) Fixes from Bahamut-release tree.
+ (SM) Channel Administrators are now prefixed with  and will be correcly displayed in /WHO and elsewhere.
+ (SM) /WHO tokens have been altered slightly.
+      <*> % now designates a HalfOp
+      <*>  now designates a user set +i. Only seen by IRC Operators.
+ (SM) SSJOIN now at protocol level 4 to deal with the change in Channel Administrators prefix change.
+      Limited backwards compactibility added but will be removed before b1 is released.
+ (SM) Idle time for operators now show i /whois again.
+ (SM) /WHOIS have undergone some cosmetical alterations.
+ (SM) Hunted down and killed the stupid(tm) error causing problems in alpha23 causing the recall.
+ (SM) Reversed read_message() patch from a24 as it caused preformance problems.
+ (SM) E lines now exempt from K/G/Z lines aswell as throttles.
+ (SM) Please note that E and F lines are not yet fully finalized and some bugs may remain.
+      Also note that some services may enforce AKILLS, SZLINES and SGLINES and thus
+      kill users regardless of E lines.
+
+
+alpha24
+ (SM) Notices about users carrying invitations overriding bans now are sent to all channel staff.
+      Reported by Anomy
+ (SM) Removed asserts from irccmp() and ircncmp()
+ (SM) Call read_message() with a delay of 1 for servers aswell. This is at least a workaround for
+      the issue discovered in a23. Thanx to Shmad for helping out debugging.
+
+
+alpha23
+ (AA) Ported /ADDCNLINE, /ADDULINE, /ADDQLINE, /ADDHLINE and /ADDOPER
+      from Uircd 2.8.2. And the counterparts with /DEL*
+ (SM) /who ? now returns correctly formatted output.
+      Reported by Anomy.
+ (BP) Fixed channel ban desync on netjoin
+ (BP) All channel modes are now sent with a TS
+ (BP) Target limiting anti-spam measure installed
+ (BP) Reject acebot-style drones by default
+ (BP) Minor fixes to prevent annoying auth error messages
+ (BP) Don't use FD_SETSIZE at all if USE_POLL is defined
+ (BP) Fixed a server negotiation bug that could break apart the network
+      when autoconnects and user connects were done at the same instant
+ (BP) Fix a bug where PART messages were not sent to 'userB' when 'userA's
+      QUIT message was squelched on more than 1 channel
+ (BP) Keep /trace from crashing and/or trashing on memory
+ (SM) Fixed a cosmetical issue with the link routing notices for non NickIP servers.
+ (SM) NICK's introduced with invalid number of parameters aswell as NICK's introduced with invalid hostnames
+     (ie. hostnames without a single dot) will no longer only be ignored, but also killed to prevent desynchs.
+ (SM) Reverted the partial RFC violation fix introduced in a22 after having discussed it some more.
+      The fix was only partial and didnt work properly. Taking into consideration that most IRCds now no longer
+      aknowledges that part of the RFC, we reverted back to ascii matching.
+ (SM) IRCd socks4 proxy scanner is now disabled by default and is listed in the broken/discouraged section of
+      include/config.h
+      The UltimateIRCd development team strongly recomends that 3rd party tools like bopm or neobopm be used
+      for the task.
+ (SM) Fixed a compiler warning when the sockschecker was undefined.
+ (SM) Borrowed irccmp() and ircncmp() from hybrid to replace mycmp() and myncmp() (Yes they where more or less the same
+      exept that irccmp() did lexographical checking.
+      This should resolve several bugs including multiple U lines not being matched correctly amongst other things.
+ (SM) Fixed a minor bug in /WHO.
+ (SM) HelpOps will now be set -h when going /AWAY
+ (SM) /IRCOPS have been cleaned up a bit. It will now show opers that are away and will mark them as such.
+      It will also state if the oper have +h set.
+ (SM) Voiced users behaviour have been returned to standard behaviour. Users may no longer devoice themselves.
+ (SM) Halfoped users behaviour have been returned to standard behaviour. HalfOps may no longer halfop or dehalfop others.
+ (SM) Services Clients (+S) are now protected from /KILL
+ (SM) ELines now exempt from zlines as it should.
+ (SM) FLines now exempt from throttle checks
+
+
+alpha22
+ <*> Upgraded to zlib1.1.4-p1
+     Thanx to Mark Adler <madler at alumni do caltech dot edu> and Jean-loup Gailly <jloup at gzip dot org> for hunting down
+     the obscure bug causing crashes. Turns out to be a bug in gcc with -O.
+ <*> Multiple channels in OPERS_AUTO_JOIN or USERS_AUTO_JOIN will actually work past the first
+     connecting client or first /oper.
+ <*> GEO_LOCATION now outputted in RPL_CREATED instead of RPL_YOURHOST.
+ <*> Cosmetical change to RPL_CREATED. "This server was created" is now "This server was last (re)started on".
+ <*> /who now returns * for IRC Operators __everywhere__, reported by Anomy.
+ <*> Fix a DALnet RFC violation in handeling of nicknames and channels. {}|^ are to be considered the lowercase
+     equivalent of []\~. Bahamut's failure to abide by this breaks IRC clients which abides by the RFC aswell as
+     create confusion for scandinavian users as for example #H�on wont be the same channel as #H�ON even though
+     its not different from say #Dreamer and #DREAMER.
+ <*> Fixed a bug in channel_mode which could lead to very bad things(tm) happening.
+     Reported by X-Trace.
+ <*> Fixed a bug where if you issued /mode #Channel +lk 10 somekey and channel already had +l 10 set,
+     the key would become 10 and not somekey.
+ <*> Clients introduced from other servers that have no . (dot) in their hostname are now correctly ignored.
+ <*> It is no longer possible to split ride a new topic to already exsisting channels, fix from bahamut-devel.
+ <*> SVSKILL fix from bahamut-release.
+
+
+alpha 21
+
+ <*> /invite now works. ShadowMaster stupidity(tm)
+ <*> /invite now sends out the proper notices to channel staff.
+ <*> /MAP should now count clients correctly always.
+
+ 
+alpha 20
+
+ <*> Added clan-forsaken.network
+ <*> Fixed a few issues with /invite, most notably inviting users to Oper only channels works properly now.
+ <*> Halfops cannot invite to +i/+N/+O channels anymore.
+ <*> Fixed a bahamut bug(tm) in akill and szline where not all clients where checked against the newly added
+     akills/szlines. Thus some clients who should have been killed was not under rare circumstances.
+ <*> When adding SZlines and SGlines the IRCd now checks if it have any clients matching the respective
+     SZlines and SGlines.
+ <*> /Who flag changes introduced in alpha19 have been reversed.
+      * - User is an IRC Operator
+      % - User is invisible (Oper only)
+ <*> Realhosts are no longer revealed in * is now active for (client/host) notices sent to all +s clients upon
+     finding a client matching an akill/szline/kline/zline
+ <*> Additional K/Z line fixes from bahamut stable tree
+ <*> Throttles now send out Network Global notices.
+
+
+alpha 19
+
+ <*> Some entries missed out on between some alpha's due to ShadowMaster Lazyness(tm). Nothing important left out, no worries.
+     Minor bugfixes only.
+ <*> /knock now sends notice to all channel staff. Not only ChanOps.
+ <*> /map now really hides U lined servers if hide U Lined servers is set.
+ <*> The following fixes have been merged from the bahamut release tree:
+     - Throttling by Chip Norkus added.
+     - Major bug causing memory corruption (coredumps as well as
+       duplicate or missing messages) fixed
+     - Lag on signon fixed (where a user connects, but the server chooses
+      to ignore the user until something is sent to them)
+     - Fixed a netsplit detection bug when a leaf server splits from its hub
+      (for no_chanops_when_split)
+     - Fix for .conf based K: lines (that just didn't work)
+     - Kline/akill/zline matching has been revamped, which should help greatly with
+      lag under heavy user loads with many klines/akills/zlines
+     - Deny sending . files (with a null extension) to prevent
+       the spreading of exploits
+     - Q Line reason will now show when trying to join a Q lined channel.
+     - Klines are now matched against IP's aswell.
+ <*> All file headers updated
+     - Copyrights modified. All contributors are now listed in doc/authors/
+     - All references to the GPL now point to GPL v2.
+ <*> Various cosmetic updates.
+ <*> Opers now "see all" in /who's.
+ <*> /who +v no longer returns clients that do not have hiddenhosts set.
+ <*> /who will no longer return real hostnames as mIRC and possibly other clients takes their
+     default ban masks from /who output.
+     Numeric 671 now returns the realhost in /who replies.
+ <*> /who code cleaned up. Should fix most issues.
+ <*> /who return flags have changed:
+      G - User is gone (/away)
+      H - User is here (not /away)
+      O - User is an IRC Operator
+      * - User is a Channel Administrator
+      @ - User is a Channel Operator
+      % - User is a Channel Half Operator
+       - User is invisible (Oper only)
+ <*> Redundant modes are no longer applied.
+         Based on a patch originally by Danel Engel <dane at zero dot org>
+ <*> Failed oper notices will now go out network wide over Net Global.
+ <*> GEO_LOCATION actually used now.
+         Reported by Mortalica.
+ <*> We now are TS5 by default.
+ <*> Proper error checking on dynconf settings are now carried out.
+ <*> RealName (GCOS) is now shown in connect notices.
+ <*> Networks settings file version have been uped to version 2.1.3 and now
+      features an option to enable or disable the various services aliases.
+
+ 
+older alpha's
+
+ <*> Started out with a clean version of Bahamut1.4.8 and starting
+     recode of UltimateIRCd.
+ <*> renamed patchlevel.h to version.h and cleaned it up a bit.
+ <*> Added usermode +x (hidden host).
+ <*> Added the dynamic configuration loading routines by Stskeeps. Settings are
+     again read on startup.
+ <*> Added /SETTINGS to display the dynconf settings and others.
+ <*> Added /OPERMOTD.
+ <*> Added /REHASH OPERMOTD.
+ <*> Added /RULES.
+ <*> Added /REHASH RULES.
+ <*> Removed the Routing Team Member usermode +R.
+ <*> Operators on U Lined servers are now no longer counted in /lusers.
+ <*> Users can now see their own hostname and usermodes in a WHOIS on themselves.
+ <*> The IRCd now includes some basic flood protection in WHOIS on operators.
+ <*> Channelmodes +a (Channel Admin) and +h (HalfOp) added.
+ <*> You can now devoice yourself.
+ <*> Made it so that halfops cannot kick chanops and chanops cannot kick chanadmins.
+ <*> Halfops can now not change channel modes +i, +l or +k.
+ <*> Wrote /VHOST based loosly on exsisting /OPER implementation.
+     V-Lines can be placed in the ircd.conf or the vhost.conf and should be in the format
+     V:virtualhost:password:login
+     where the passwords can be encrypted if so wished.
+ <*> Added new operlevels:
+     - Network Admin with usermode +T and O-Line flag T
+     - Network Co Admin with usermode +t and O-Line flag t
+     - Server Admin with usermode +A and O-Line flag A
+     - Server Co Admin with usermode +J and O-Line flag J
+     - Guest Admin with usermode +j and O-Line flag j
+     - Services Root Admin with usermode +Z and O-Line flag Z
+     - Services Admin with usermode +P and O-Line flag P
+     - Services Operator with usermode +a and O-Line flag a
+ <*> Added /SETHOST based on m_sethost by Stskeeps [UnrealIRCd]
+ <*> VHOST's can now be viewed by using /STATS V.
+ <*> Made sure you cannot cause buffer overflows with /VHOST.
+ <*> /REHASH now returns an error  if you dont enter a valid parameter.
+ <*> Added /CREDITS
+ <*> Added /COPYRIGHT
+ <*> Added usermode +S for services clients.
+ <*> Added usermode +p for oper protection
+ <*> Added usermode +F for global connect notices.
+ <*> You now cannot kick +S clients.
+ <*> You now cannot kick +p opers without being +p yourself or being a Net Admin or Net Co Admin.
+ <*> Added /ADCHAT
+ <*> Added new local connect/exit notices.
+ <*> Added global connect/exit notices to +F opers.
+ <*> Added /IRCOPS based on m_ircops by ScOrP|On [DreamForge.sf3]
+ <*> Added channelmode +e to allow channel ban exempts.
+ <*> You can now send notices with prefixes *@%+ ie /NOTICE *@%#Channel Your Text Here
+ <*> You can now define in the dynamic configuration if operators should be able to gain +p upon /OPER.
+ <*> Added O-Line flag p for usermode +p (Protected IRC Operator)
+ <*> /WHOWAS now displays the hiddenhost for a user if he was +x.
+     Now also displays users realhost and ip to opers.
+ <*> Fixed backwards compactibility with old SSJOIN protocols used by services.
+     SmartJoin3 now passes along *% for halfops to SSJ3 servers.
+ <*> Opers can now see all users in a channel by doing /NAMES #channel. Opers also see all channels a user is in when doing
+     a /WHOIS. The nicknames and channels the oper would not normally see are prefixed by  to avoid confution and make it
+     clear beyond any doubt that this nick or channel the oper would not normally see.
+ <*> U-Lined clients now do not have their channels listed in a /whois
+ <*> /MODE +b no longer shows the realhost of the person setting a ban if he was +x when the ban was set.
+ <*> /STATS P/p no longer shows the realhost of opers *eherm, whoopsa*
+ <*> Chan Admins and HalfOps can now /INVITE
+ <*> Added /MAP from StarChat IRCd. Sligh modification to the code to stop U-Lined servers from showing if
+     hide ulined servers is set and ulined servers never is shown to have any clients in MAP.
+ <*> Added network auto join channel for opers and users.
+ <*> Removed s_err.h. Was broken.
+ <*> Whois now hides opers idle time from nonopers.
+ <*> Opers now do not get a WHOIS notice if WHOIS was done by himself
+ <*> Removed /SAMODE.
+ <*> Cleaned up sento_ops_lev a bit. Now clearly identifies the notice for easiler filtering.
+ <*> Fixed the oline flags for umode +d, +y and +b.
+ <*> Fixed the checks in m_umode. You cannot set modes like +b and +d unless you have the actual oline flags now.
+ <*> Added the channel restrict system by Stskeeps.
+ <*> Cleaned up m_stats a tad. stats D|d, K|k, Q|q, V are now locked as oper only. Defineable in config.h
+ <*> Added /MAKEPASS.
+ <*> Changed chatops from +b to +C.
+ <*> Added RC4 streaming encryption (diffie hellman key exchange) by Lucas Madar
+     - Requires GMP library
+     - Vulnerable to man-in-the-middle attacks
+     - Requires 'E' flag in the N: line on both servers.
+ <*> Added zlib compression for links by Lucas Madar
+     - Requires 'Z' flag in the N: line of a server that wishes to zip outgoing links to that link.
+ <*> Fixed the OLine flag for umode +e. Now needs the +e flag in the OLine.
+ <*> Added the fix for the del_banid bug from the Bahamut tree.
+ <*> Fixed a missing #ifdef in s_socks.c preventing the ircd from compiling if SOCKSPORT was undefined.
+ <*> Cleaned up the entire s_socks.c
+ <*> Fixed a bug where guest admins where given privs above global oper reported by Quinn.
+ <*> Only HalfOps and above can now see channel banlists and exemptlists.
+ <*> Fixed a bug (Actually old behaviour and not a bug) where local IRC Operators would not show as such
+     from other servers reported by Mortalica and Quinn.
+ <*> HalfOps can now set and view exempts reported by DodGeR.
+ <*> Channel No Invites mode have been changed from +I to +N to fix conflicts with mIRC Channel Center reported by DodGeR.
+ <*> Added the new help system --Acidic32
+ <*> Fixed a nasty bug in ircsprintf.c reported by <dodger at novernet dot com>
+ <*> Added /IRCDHELP command as alias for /QUOTE HELP --Acidic32
+ <*> /IRCOPS no longer show opers marked as /away or opers not set +h (HelpOp)
+ <*> Local IRC Operators can now join Oper Only channels (+O) reported by Mortalica
+ <*> Applied channel key bugfix from Bahamut stable tree.
+ <*> Added support for Q Lines channels from Bahamut stable tree,
+ <*> Applied a remote client bugfix from Bahamut stable tree.
+ <*> Added support for NICKIP from Bahamut stable tree.
+ <*> Added ability to search for clients by IP in /who using flag +i from Bahamut stable tree.
+ <*> Added ability to search for clients by virthost in /who using flag +v.
+ <*> Cleaned up /WHO to the point where it should work properly and display the correct information at any given time
+     to opers and nonopers under both hiddenhost and non hiddenhost situations.
+ <*> Added glibc2.2.2 check from Bahamut stable tree.
+ <*> Fixed a bug in KICK now allowing channel admins to kick chanops.
+     Reported by Anomy.
+ <*> New crc32 based hostmasking implemented. Based on the crc32 function by //ylo which is based on the
+     original work of Gary S. Brown. Additional code and ideas from [-Th3Dud3-] (RageIRCd) and the UnrealIRCd
+     development team.
+ <*> Fixed the issues with viewing and setting bans and exempts in channels. IRC Operators can now always view then ban/exempt list again.
+ <*> Set the default compiler flags to be more sane for normal users aswell as undefined debugmode by default.
+ <*> Fixed the issue with VHOST not propogating for non opers.
+ <*> Modified ircsprintf to not handle hex and made make_virthost use ircsprintf again.
+ <*> Cleaned up hiddenhost handeling of IPv4. Wont take hosts like 195-168-192-65.isp.co.uk as IPv4's anymore.
+ <*> Added fix for minor bug in m_nick from bahamut stable tree.
+ <*> Added improved sockerror handeling from bahamut stable tree.
+ <*> /version will now return PROTOCTL.
+ <*> /who works for real now.
+ <*> We will no longer create hiddenhosts for users on MODE_x = 0 networks and we will no longer create vhosts for remote users *whoops*
+
+
