@@ -1,12 +1,11 @@
-UltimateIRCd 3.0 README.FIRST
+SurrealIRCD 0.0.1 README.FIRST
 ----------------------------------------------
-$Id: README.FIRST 879 2005-03-16 07:41:17Z shadowmaster $
 
 If you don't read this first, we won't help you.
 :-)
 
 See the INSTALL document for info on configuring and compiling
-UltimateIRCd 3.0
+SurrealIRCD 0.0.1
 
 See the FAQ for frequently asked questions. If you do NOT read the FAQ
 and come ask for support on something answered by the FAQ, chances are
@@ -42,11 +41,10 @@ The network settings files will change between releases during the alpha version
 Be sure to keep an eye on conf/networks/ChangeLog and adjust your network settings file
 accordingly.
 
-To obtain support for UltimateIRCd please go to http://www.shadow-realm.org/forum/
+To obtain support for SurrealIRCD please connect to irc.ilkotech.co.uk #SurrealSupport
 
-WARNING: UltimateIRCd is NOT compactible with other IRCd's. This includes UltimateIRCd 2.8.x or older.
+WARNING: SurrealIRCD is NOT compactible with other IRCd's.
 Do not try, it WILL NOT WORK. You have been warned.
 
-SERVICES: UltimateIRCd 3.0.0 will work with any services which supports the Bahamut 1.4.8-1.4.28 protocol.
-It will also work with any services supporting the UltimateIRCd 3.0 protocol extentions.
-It will NOT work with services compiled with UltimateIRCd 2.x.x support.
+SERVICES: SurrealIRCD 0.0.1 will work with any services which supports the Bahamut 1.4.8-1.4.28 protocol.
+It will also work with any services supporting the SurrealIRCD protocol extentions.
